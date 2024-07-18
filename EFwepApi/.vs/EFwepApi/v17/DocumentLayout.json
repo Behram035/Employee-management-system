@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DOTNET\\EFwepApi\\",
+  "WorkspaceRootPath": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\efwepapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\employee-management-system\\efwepapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\employee-management-system\\efwepapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\efwepapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\employee-management-system\\efwepapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\employee-management-system\\efwepapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\efwepapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\employee-management-system\\efwepapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|d:\\dotnet\\efwepapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07B6E9B4-CB41-42F7-AF45-3D7F4CBD47E5}|EFwepApi.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T09:49:51.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DOTNET\\EFwepApi\\Program.cs",
+              "DocumentMoniker": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DOTNET\\EFwepApi\\Program.cs",
+              "ToolTip": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T10:16:17.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T10:16:17.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\DOTNET\\EFwepApi\\appsettings.json",
+              "DocumentMoniker": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\DOTNET\\EFwepApi\\appsettings.json",
+              "ToolTip": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-10T08:34:49.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-10T08:34:49.225Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EmployeeController.cs",
-              "DocumentMoniker": "D:\\DOTNET\\EFwepApi\\Controllers\\EmployeeController.cs",
+              "DocumentMoniker": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
-              "ToolTip": "D:\\DOTNET\\EFwepApi\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "Controllers\\EmployeeController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAzwBYAAABDAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAA/wDoAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T06:06:48.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\DOTNET\\EFwepApi\\Controllers\\UsersController.cs",
+              "DocumentMoniker": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "D:\\DOTNET\\EFwepApi\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA8wFEAAAASAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAgwFUAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-09T12:47:35.973Z",
               "EditorCaption": ""

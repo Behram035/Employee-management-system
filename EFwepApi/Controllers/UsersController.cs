@@ -86,6 +86,21 @@ namespace EFwepApi.Controllers
             var allUsers = await dbContext.Users.ToListAsync();
             return Ok(allUsers);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdatePassword(UpdatePassword userPassword)
+        {
+            var user = await dbContext.Users.FirstOrDefaultAsync(x => x.Email == userPassword.Email);
+            if (user is not null)
+            {
+                user.Password = userPassword.Password;
+
+                await dbContext.SaveChangesAsync();
+                return Ok(user);
+            }
+            return NotFound("Email not Found");
+        }
+
         [Authorize]
         [HttpGet]
         [Route("{id:guid}")]

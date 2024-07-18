@@ -17,6 +17,7 @@ import ProtectedRoute from "./components/Login/ProtectedRoute";
 import Logout from "./components/Login/Logout";
 import UserContext from "./UserContext";
 import EmployeeDetails from "./components/EmployeeDetails";
+import ForgetPassword from "./components/Login/ForgetPassword";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -45,6 +46,7 @@ function App() {
         />
         <Route path="signup" element={<Signup />} />
         <Route path="login" element={<Login />} />
+        <Route path="login/forget-password" element={<ForgetPassword />} />
         <Route path="logout" element={<Logout />} />
         <Route
           path="addemployee"

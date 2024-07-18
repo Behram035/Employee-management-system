@@ -76,9 +76,9 @@ const Login = () => {
               autoComplete="off"
             />
 
-            <div className="text-sm">
+            <div className="text-sm mb-2">
               <NavLink
-                to="#"
+                to="forget-password"
                 className="font-semibold text-orange-700 hover:text-orange-400"
               >
                 Forgot password?
@@ -98,7 +98,7 @@ const Login = () => {
           Not a member?
           <NavLink
             to="/signup"
-            className="font-semibold leading-6 text-orange-700 hover:text-orange-400"
+            className="font-semibold mr-2 leading-6 text-orange-700 hover:text-orange-400"
           >
             Create Your New Account
           </NavLink>
