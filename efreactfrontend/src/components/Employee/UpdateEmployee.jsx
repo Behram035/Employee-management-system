@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
@@ -7,7 +7,7 @@ import TextInput from "../InputFields/TextInput";
 import { getEmployee, updateEmployees } from "../API/API";
 import SelectInput from "../InputFields/SelectInput";
 
-const UpdateEmployee = ({ BaseUrl }) => {
+const UpdateEmployee = () => {
   const { id } = useParams();
   const methods = useForm();
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const UpdateEmployee = ({ BaseUrl }) => {
         console.error(error);
         toast.error("Data Fetching Error...");
       });
-  }, [id, methods, BaseUrl]);
+  }, []);
 
   const onSubmit = (updateEmployee) => {
     axios

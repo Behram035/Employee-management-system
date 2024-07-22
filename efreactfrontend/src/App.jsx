@@ -8,15 +8,15 @@ import {
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Layout from "./Layout";
-import ListEmployee from "./components/ListEmployee";
-import AddEmployee from "./components/AddEmployee";
-import UpdateEmployee from "./components/UpdateEmployee";
+import ListEmployee from "./components/Employee/ListEmployee";
+import AddEmployee from "./components/Employee/AddEmployee";
+import UpdateEmployee from "./components/Employee/UpdateEmployee";
 import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
 import ProtectedRoute from "./components/Login/ProtectedRoute";
 import Logout from "./components/Login/Logout";
 import UserContext from "./UserContext";
-import EmployeeDetails from "./components/EmployeeDetails";
+import EmployeeDetails from "./components/Employee/EmployeeDetails";
 import ForgetPassword from "./components/Login/ForgetPassword";
 
 function App() {
