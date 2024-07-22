@@ -27,6 +27,12 @@ const ForgetPassword = () => {
     <div>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Forget Password</h1>
+        <ul>
+          <p>NOTE:</p>
+          <li> . If your entered Email is found then Password should be updated.</li>
+          <li> . If your entered Email is Not found then Password should not be updated.</li>
+        </ul>
+        <br />
         <FormProvider {...methods}>
           <form
             onSubmit={methods.handleSubmit(updatePassword)}

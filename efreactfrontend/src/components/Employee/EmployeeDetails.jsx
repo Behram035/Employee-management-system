@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
-import { getEmployee } from "./API/API";
+import { getEmployee } from "../API/API";
 
 const EmployeeDetails = () => {
   const { id } = useParams();
@@ -27,10 +27,11 @@ const EmployeeDetails = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <Link to="/" className="text-white text-md bg-blue-600 text-center shadow-md hover:bg-blue-400 mx-1 px-6 max-w-full rounded-md py-1">Back</Link>
       <h1 className="text-3xl font-bold mb-8 mt-8">Employee Details</h1>
 
       {
-        <div className=" sm:mx-auto lg:mx-20 md:mx-20  p-4 mb-4 rounded-xl text-center shadow-2xl shadow-gray-400">
+        <div className=" sm:mx-auto lg:mx-40 md:mx-30  p-4 mb-4 rounded-xl text-center shadow-2xl shadow-gray-400">
           <h2 className="text-3xl text-center font-bold mb-6 mt-4">
             <label>
               <span className="font-semibold text-gray-700">
@@ -41,19 +42,25 @@ const EmployeeDetails = () => {
           </h2>
           <hr />
           <div className="mt-6 mb-6">
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-3">
               <label>
                 <span className="font-semibold text-gray-900">Email: </span>
                 {employee.email}
               </label>
             </p>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-3">
+              <label>
+                <span className="font-semibold text-gray-900">Gender: </span>
+                {employee.gender}
+              </label>
+            </p>
+            <p className="text-xl text-gray-600 mb-3">
               <label>
                 <span className="font-semibold text-gray-900">Title: </span>
                 {employee.title}
               </label>
             </p>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-3">
               <label>
                 <span className="font-semibold text-gray-900">
                   Department:{" "}
@@ -61,7 +68,7 @@ const EmployeeDetails = () => {
                 {employee.department}
               </label>
             </p>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-3">
               <label>
                 <span className="font-semibold text-gray-900">Address: </span>
                 {employee.address}

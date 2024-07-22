@@ -3,9 +3,9 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
-import TextInput from "./InputFields/TextInput";
-import { getEmployee, updateEmployees } from "./API/API";
-import SelectInput from "./InputFields/SelectInput";
+import TextInput from "../InputFields/TextInput";
+import { getEmployee, updateEmployees } from "../API/API";
+import SelectInput from "../InputFields/SelectInput";
 
 const UpdateEmployee = ({ BaseUrl }) => {
   const { id } = useParams();

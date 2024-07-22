@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { GetAllEmployees, DeleteEmployee } from "./API/API";
+import { GetAllEmployees, DeleteEmployee } from "../API/API";
 
 const ListEmployee = () => {
   const [search, setSearch] = useState("");
@@ -85,7 +85,7 @@ const ListEmployee = () => {
             placeholder="Search Employee"
           />
         </div>
-        {/* <TextInput name="firstname" placeholder="First Name"/> */}
+        
         <div>
           <ul className="grid lg:grid-cols-3 gap-6 md:grid-cols-2 max-w-full">
             {employees.map((employee) => (

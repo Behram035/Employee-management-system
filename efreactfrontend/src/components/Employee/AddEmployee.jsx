@@ -3,9 +3,9 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
-import TextInput from "./InputFields/TextInput";
-import SelectInput from "./InputFields/SelectInput";
-import { addEmployee } from "./API/API";
+import TextInput from "../InputFields/TextInput";
+import SelectInput from "../InputFields/SelectInput";
+import { addEmployee } from "../API/API";
 
 const AddEmployee = () => {
   const methods = useForm();
