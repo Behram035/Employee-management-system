@@ -57,14 +57,14 @@ const Header = () => {
             </NavLink>
           </div>
           <div className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1 lg:flex lg:w-auto lg:order-1">
-            <ul className="flex flex-col mt-4 font-medium md:flex-row lg:flex-row lg:space-x-8 lg:mt-0">
+            <ul className="flex flex-col mb-4 mt-4 font-medium md:flex-row lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 ${
                       isActive ? "text-orange-700" : "text-gray-700"
-                    }  hover:bg-gray-50 lg:hover:bg-transparent border border-orange-200 lg:border-0 hover:text-orange-700 lg:p-0`
+                    }  hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
                   Employees List
@@ -76,7 +76,7 @@ const Header = () => {
                   className={({ isActive }) =>
                     `block py-2 pr-4 pl-3 duration-200 ${
                       isActive ? "text-orange-700" : "text-gray-700"
-                    }  hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 border border-orange-200 hover:text-orange-700 lg:p-0`
+                    }  hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
                   Add Employee
@@ -111,14 +111,14 @@ const Header = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden">
-          <ul className="flex flex-col ">
+          <ul className="flex flex-col">
             <li>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-700" : "text-gray-700"
-                  } hover:bg-gray-50 lg:hover:bg-transparent border border-orange-200 hover:text-orange-700 lg:p-0`
+                  } hover:bg-gray-50 lg:hover:bg-transparent hover:text-orange-700 lg:p-0`
                 }
               >
                 Employees List
@@ -130,7 +130,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   `block py-2 pr-4 pl-3 duration-200 ${
                     isActive ? "text-orange-700" : "text-gray-700"
-                  }  hover:bg-gray-50 lg:hover:bg-transparent border border-orange-200 hover:text-orange-700 lg:p-0`
+                  }  hover:bg-gray-50 lg:hover:bg-transparent hover:text-orange-700 lg:p-0`
                 }
               >
                 Add Employee

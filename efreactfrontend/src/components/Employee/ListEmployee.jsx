@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { GetAllEmployees, DeleteEmployee } from "../API/API";
+// import UserContext from "../../UserContext";
 
 const ListEmployee = () => {
   const [search, setSearch] = useState("");
   const [employees, setEmployees] = useState([]);
+
+  // const {delete} = useContext(UserContext); 
 
   const fetchData = async () => {
     await axios
