@@ -27,6 +27,14 @@ namespace EFwepApi.Controllers
         [HttpPost]
         public async Task<IActionResult> AddEmployee(EmployeeModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var employee = await dbContext.Employee.FirstOrDefaultAsync(x => x.Email == model.Email );
+
+            if (employee == null){
+
             var addEmployee = new Employee
             {
                 Id = Guid.NewGuid(),
@@ -43,6 +51,11 @@ namespace EFwepApi.Controllers
             await dbContext.Employee.AddAsync(addEmployee);
             await dbContext.SaveChangesAsync();
             return Ok(addEmployee);
+            }
+            else
+            {
+                return BadRequest("Employee is Registered with This Email.");
+            }
         }
         [HttpGet]
         [Route("{id:guid}")]

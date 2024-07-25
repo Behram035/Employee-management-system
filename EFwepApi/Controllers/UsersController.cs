@@ -79,7 +79,7 @@ namespace EFwepApi.Controllers
             }
             return NoContent();
         }
-        [Authorize]
+        // [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -101,7 +101,7 @@ namespace EFwepApi.Controllers
             return NotFound("Email not Found");
         }
 
-        [Authorize]
+        // [Authorize]
         [HttpGet]
         [Route("{id:guid}")]
         public async Task<IActionResult> GetUser(Guid id)

@@ -16,11 +16,12 @@ const AddEmployee = () => {
       .post(`${addEmployee}`, newEmployee)
       .then(() => {
         toast.success("Employee added successfully!");
+        console.log(newEmployee);
         navigate("/");
       })
       .catch((error) => {
         console.error("There was an error adding the Employee!", error);
-        toast.error("Failed to add Employee.");
+        toast.error("Employee is Existed with Email.");
       });
   };
 
