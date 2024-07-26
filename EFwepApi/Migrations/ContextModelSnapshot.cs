@@ -66,7 +66,12 @@ namespace EFwepApi.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Employee");
                 });
@@ -92,6 +97,20 @@ namespace EFwepApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("EFwepApi.Models.Employee", b =>
+                {
+                    b.HasOne("EFwepApi.Models.User", "User")
+                        .WithMany("Employees")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("EFwepApi.Models.User", b =>
+                {
+                    b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618
         }
