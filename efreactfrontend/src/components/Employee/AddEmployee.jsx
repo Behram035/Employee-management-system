@@ -1,15 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useForm, FormProvider } from "react-hook-form";
 import TextInput from "../InputFields/TextInput";
 import SelectInput from "../InputFields/SelectInput";
-import { addEmployee } from "../API/API";
+import { addEmployee, uploadFilexlsx } from "../API/API";
 
 const AddEmployee = () => {
   const methods = useForm();
   const navigate = useNavigate();
+  const [file, setFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+
+  const handleUpload = () => {
+    if (file) {
+      const formData = new FormData();
+      formData.append("file", file);
+      console.log("FormData Content: ", formData.get("file"));
+      axios
+        .post(`${uploadFilexlsx}`, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then(() => {
+          toast.success("File is Uploaded Successfully");
+          navigate("/");
+        })
+        .catch((error) => {
+          console.error("There was an error adding the File!", error);
+          toast.error("There was an error uploading the file.");
+        });
+    } else {
+      toast.error("Please select a file to upload.");
+    }
+  };
 
   const onSubmit = (newEmployee) => {
     axios
@@ -28,6 +57,21 @@ const AddEmployee = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Add Employee</h1>
+
+      <input
+        type="file"
+        name="Upload file"
+        id="fileInput"
+        onChange={handleFileChange}
+      />
+      <button
+        type="submit"
+        onClick={handleUpload}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Upload File (xlsx)
+      </button>
+
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)} className="max-w-5xl">
           <div className="grid lg:grid-cols-3 gap-4 md:grid-cols-2">

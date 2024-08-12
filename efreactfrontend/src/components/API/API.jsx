@@ -15,3 +15,5 @@ export const userRegister = `${BaseUrl}/Registration`;
 export const userLogin = `${BaseUrl}/Login`;
 
 export const updatePasswordApi = `${BaseUrl}/UpdatePassword`;
+
+export const uploadFilexlsx = `${BaseUrl}/UploadFile`;
