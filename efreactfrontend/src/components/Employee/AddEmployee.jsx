@@ -57,21 +57,21 @@ const AddEmployee = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Add Employee</h1>
-
-      <input
-        type="file"
-        name="Upload file"
-        id="fileInput"
-        onChange={handleFileChange}
-      />
-      <button
-        type="submit"
-        onClick={handleUpload}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Upload File (xlsx)
-      </button>
-
+      <div className="container mx-auto px-4 py-8">
+        <input
+          type="file"
+          name="Upload file"
+          id="fileInput"
+          onChange={handleFileChange}
+        />
+        <button
+          type="submit"
+          onClick={handleUpload}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Upload File (xlsx)
+        </button>
+      </div>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)} className="max-w-5xl">
           <div className="grid lg:grid-cols-3 gap-4 md:grid-cols-2">
