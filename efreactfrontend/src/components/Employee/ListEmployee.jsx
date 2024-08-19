@@ -3,13 +3,22 @@ import { Link, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { GetAllEmployees, DeleteEmployee } from "../API/API";
+import {
+  MdOutlineSkipNext,
+  MdOutlineSkipPrevious,
+  MdDeleteForever,
+  MdEdit,
+  MdPersonAdd,
+} from "react-icons/md";
 // import UserContext from "../../UserContext";
 
 const ListEmployee = () => {
   const [search, setSearch] = useState("");
   const [employees, setEmployees] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize] = useState(9);
 
-  // const {delete} = useContext(UserContext); 
+  // const {delete} = useContext(UserContext);
 
   const fetchData = async () => {
     await axios
@@ -45,7 +54,7 @@ const ListEmployee = () => {
 
       .catch((error) => {
         console.log(error);
-        toast.error("Employee Does not match")
+        toast.error("Employee Does not match");
       });
   };
   useEffect(() => {
@@ -70,6 +79,26 @@ const ListEmployee = () => {
       toast.error("Failed to Delete Employee.");
     }
   };
+
+  const indexOfLastEmployee = currentPage * pageSize;
+  const indexOfFirstEmployee = indexOfLastEmployee - pageSize;
+  const currentEmployees = employees.slice(
+    indexOfFirstEmployee,
+    indexOfLastEmployee
+  );
+
+  const totalPages = Math.ceil(employees.length / pageSize);
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) =>
+      prevPage < totalPages ? prevPage + 1 : prevPage
+    );
+  };
+
+  const handlePreviousPage = () => {
+    setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
+  };
+
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -77,9 +106,9 @@ const ListEmployee = () => {
         <div className="flex justify-between">
           <Link
             to="/addemployee"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 inline-block"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-4 inline-block"
           >
-            Add Employee
+            <MdPersonAdd size={35}/>
           </Link>
           <input
             value={search}
@@ -88,10 +117,10 @@ const ListEmployee = () => {
             placeholder="Search Employee"
           />
         </div>
-        
+
         <div>
           <ul className="grid lg:grid-cols-3 gap-6 md:grid-cols-2 max-w-full">
-            {employees.map((employee) => (
+            {currentEmployees.map((employee) => (
               <li
                 key={employee.id}
                 className="border border-gray-500 p-4 mb-4 rounded-xl shadow-xl shadow-gray-400 "
@@ -115,20 +144,40 @@ const ListEmployee = () => {
                 <div className="mt-2 text-center grid grid-cols-2 gap-4">
                   <Link
                     to={`/editemployee/${employee.id}`}
-                    className="text-white bg-blue-600 text-center shadow-md hover:bg-blue-400 mx-1 px-8 rounded-md py-2"
+                    className="text-white bg-blue-600 shadow-md hover:bg-blue-400 px-16 rounded-md py-2"
                   >
-                    Edit
+                    <MdEdit size={25} />
                   </Link>
                   <button
                     onClick={() => deleteEmployee(employee.id)}
-                    className="text-white bg-red-600 text-center shadow-md hover:bg-red-700 mx-1 px-8 rounded-md py-2"
+                    className="text-white bg-red-600 shadow-md hover:bg-red-700 px-16 rounded-md py-2"
                   >
-                    Delete
+                    <MdDeleteForever size={25} />
                   </button>
                 </div>
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="flex justify-center mt-4">
+          <button
+            className="px-4 py-2 bg-gray-300 rounded-l-md"
+            disabled={currentPage === 1}
+            onClick={handlePreviousPage}
+          >
+            <MdOutlineSkipPrevious size={25} />
+          </button>
+          <span className="px-4 py-2 bg-gray-100">
+            Page {currentPage}/{totalPages}
+          </span>
+          <button
+            className="px-4 py-2 bg-gray-300 rounded-r-md"
+            disabled={currentPage === totalPages}
+            onClick={handleNextPage}
+          >
+            <MdOutlineSkipNext size={25} />
+          </button>
         </div>
       </div>
     </>

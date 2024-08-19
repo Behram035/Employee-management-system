@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import { getEmployee } from "../API/API";
+import {MdEdit} from 'react-icons/md'
 
 const EmployeeDetails = () => {
   const { id } = useParams();
@@ -27,7 +28,6 @@ const EmployeeDetails = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <Link to="/" className="text-white text-md bg-blue-600 text-center shadow-md hover:bg-blue-400 mx-1 px-6 max-w-full rounded-md py-1">Back</Link>
       <h1 className="text-3xl font-bold mb-8 mt-8">Employee Details</h1>
 
       {
@@ -84,12 +84,12 @@ const EmployeeDetails = () => {
             </p>
           </div>
           <hr />
-          <div className="mt-4 mb-4 text-center">
+          <div className="mt-2 text-center grid grid-cols-1">
             <Link
               to={`/editemployee/${employee.id}`}
-              className="text-white text-xl bg-blue-600 text-center shadow-md hover:bg-blue-400 mx-1 px-8 max-w-full rounded-md py-2"
+              className="text-white bg-blue-600 shadow-md hover:bg-blue-400 px-16 mx-auto rounded-lg py-1"
             >
-              Edit Employee
+              <MdEdit size={30}/>
             </Link>
           </div>
         </div>

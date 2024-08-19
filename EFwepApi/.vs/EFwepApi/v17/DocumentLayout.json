@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Controllers\\UploadFileController.cs",
               "ToolTip": "D:\\DOTNET\\Employee-management-system\\EFwepApi\\Controllers\\UploadFileController.cs",
               "RelativeToolTip": "Controllers\\UploadFileController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwDEAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBwAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T10:18:43.032Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAA5wGcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T09:02:08.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T09:02:08.803Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Controllers\\EmployeeController.cs",
               "ViewState": "AQIAAFEAAAAAAAAAAAAowA0AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T06:00:57.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T06:00:57.394Z"
             }
           ]
         }

@@ -6,6 +6,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import TextInput from "../InputFields/TextInput";
 import SelectInput from "../InputFields/SelectInput";
 import { addEmployee, uploadFilexlsx } from "../API/API";
+import {MdOutlineFileUpload} from 'react-icons/md'
 
 const AddEmployee = () => {
   const methods = useForm();
@@ -67,9 +68,9 @@ const AddEmployee = () => {
         <button
           type="submit"
           onClick={handleUpload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-16 py-1 rounded"
         >
-          Upload File (xlsx)
+          <MdOutlineFileUpload size={30}/>
         </button>
       </div>
       <FormProvider {...methods}>
